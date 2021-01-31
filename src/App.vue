@@ -1,4 +1,5 @@
 <template>
+  <!--Main navbar-->
   <nav class="navbar bg-success">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand text-light">
@@ -6,10 +7,12 @@
         <span class="brand">Welcome to Nonogram!</span></router-link>
     </div>
   </nav>
+  <!--Content-->
   <router-view/>
-  <!-- 
-    <div>Автор иконок: <a href="https://www.flaticon.com/ru/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div>
-  -->
+  <!--footer-->
+  <nav class="navbar fixed-bottom d-flex flex-row-reverse">
+    <div class="p-2">Автор иконок: <a href="https://www.flaticon.com/ru/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div>
+  </nav>
 </template>
 
 <style lang="scss">
