@@ -33,7 +33,4 @@ export default {
 </script>
 
 <style>
-  div[class="row"], div[class="col-md-1"], div[class="col-md-2"], div[class="col-md-9"] {
-    border: 2px solid black;
-  }
 </style>
