@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="cell">
-          
+          <h2>{{test}}</h2>
         </div>
       </div>
     </div>
@@ -12,8 +12,11 @@
 
 <script>
 export default {
-  name: 'Field'
-}
+  name: 'Field',
+  data: () => ({
+    test: "Hello"
+  })
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
