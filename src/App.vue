@@ -11,7 +11,7 @@
   <router-view/>
   <!--footer-->
   <nav class="navbar fixed-bottom d-flex flex-row-reverse">
-    <div class="p-2">Автор иконок: <a href="https://www.flaticon.com/ru/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div>
+    <div class="p-2">Author of Icons: <a href="https://www.flaticon.com/ru/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div>
   </nav>
 </template>
 
