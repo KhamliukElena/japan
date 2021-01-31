@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar bg-info">
+  <nav class="navbar bg-success">
     <div class="container-fluid">
       <router-link to="/" class="navbar-brand text-light">
         <img src="./assets/1250641.svg" alt="logo" loading="lazy"/>
