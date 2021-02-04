@@ -40,7 +40,7 @@ export default {
 
 .cell {
   aspect-ratio: 1/1;
-  background: grey;
+  background: #abe68e;
 }
 
 * {
