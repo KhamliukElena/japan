@@ -1,9 +1,9 @@
 <template>
   <div class="container">
     <div class="container-fluid">
-      <div class="row">
-        <div class="cell">
-          <h2>{{content}}</h2>
+      <div v-for="row in content.length" :key="row" class="row">
+        <div v-for="col in content.length" :key="col" class="cell">
+          <h2>Cell {{row.toString() + " " + col.toString() }}</h2>
         </div>
       </div>
     </div>
