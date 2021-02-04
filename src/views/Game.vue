@@ -1,6 +1,5 @@
 <template>
   <div class="game">
-    <h2>There will be a game</h2>
     <div class="container">
       <div class="row">
         <div class="col-md-2"><!--Left bar--></div>
@@ -33,4 +32,8 @@ export default {
 </script>
 
 <style>
+.game {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
 </style>
