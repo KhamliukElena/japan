@@ -10,29 +10,42 @@
   <!--Content-->
   <router-view/>
   <!--footer-->
-  <div class="text-right">Author of Icons: <a href="https://www.flaticon.com/ru/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div>
+  <nav class="navbar fixed-bottom"><div class="ml-auto">Author of Icons: <a href="https://www.flaticon.com/ru/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div></nav>
 </template>
 
 <style lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background: #fafaf1;
-}
 .navbar-brand {
   font-size: 1.5em;
   color: #fafaf1;
 }
-img {
-  height: 40px;
+.navbar-brand:hover {
+  color: #fafaf1;
+  text-shadow: 1px 1px 3px #abe68e;
 }
 .brand {
   margin-left: 5px;
 }
 router-link {
   text-decoration: none;
+}
+a {
+  color: #28a745;
+}
+img {
+  height: 40px;
+}
+body {
+  background: #fafaf1;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/**** Small devices**** */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.4em;
+  }
 }
 </style>

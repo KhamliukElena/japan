@@ -41,6 +41,10 @@ export default {
   margin: 0 0.5% 0.5% 0;
 }
 
+.cell:hover {
+  box-shadow: 2px 1px 3px #abe68e; 
+}
+
 * {
   margin: 0;
   padding: 0;
