@@ -3,7 +3,8 @@
     <div class="container-fluid">
       <div v-for="row in content.length" :key="row" class="row">
         <div v-for="col in content.length" :key="col" class="cell"
-          v-bind:style="sellSize">
+          v-bind:style="sellSize"
+          v-on:click="checkClick">
           Cell {{row.toString() + " " + col.toString() }}
         </div>
       </div>
@@ -19,9 +20,19 @@ export default {
       type: Array
     }
   },
+  data: function () {
+    return {
+      cellsFound: 0
+    }
+  },
   computed: {
     sellSize: function() {
       return "width: " + (100 - 1 * this.content.length)/this.content.length + "%;";
+    }
+  },
+  methods: {
+    checkClick: function() {
+      console.log("click");
     }
   }
 };
