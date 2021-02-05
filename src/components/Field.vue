@@ -2,10 +2,10 @@
   <div class="container">
     <div class="container-fluid">
       <div v-for="row in content.length" :key="row" class="row">
-        <div v-for="col in content.length" :key="col" class="cell"
+        <div v-for="col in content.length" :key="col" class="cell not-set"
           v-bind:style="sellSize"
-          v-on:click="checkClick">
-          Cell {{row.toString() + " " + col.toString() }}
+          v-on:click="checkClick"
+          v-bind:class="getImg(row, col)">
         </div>
       </div>
     </div>
@@ -33,6 +33,14 @@ export default {
   methods: {
     checkClick: function() {
       console.log("click");
+    },
+    getImg: function (i, j) {
+      if (this.content[i-1][j-1] == 1) {
+        return "is-img";
+      }
+      else {
+        return "not-img";
+      }
     }
   }
 };
