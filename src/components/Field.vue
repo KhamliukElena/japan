@@ -38,11 +38,11 @@ export default {
   background: #abe68e;
   border: 3px solid #28a745;
   border-radius: 7px;
-  margin: 0 0.5% 0.5% 0;
+  margin: 0 0.7% 0.7% 0;
 }
 
 .cell:hover {
-  box-shadow: 2px 1px 3px #abe68e; 
+  box-shadow: 1px 1px 2px #28a745, -1px -1px 2px #28a745; 
 }
 
 * {
