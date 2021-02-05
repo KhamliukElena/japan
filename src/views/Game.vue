@@ -20,9 +20,10 @@ export default {
     Field
   },
   data() {
-    return { content: [ [1, 0, 1],
-            [0, 1, 0],
-            [1, 0, 1]
+    return { content: [ [1, 0, 1, 0],
+            [0, 1, 0,0],
+            [1, 0, 1,0],
+            [1, 0, 1, 0]
     ]};
   },
   methods: {
@@ -31,9 +32,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .game {
-  padding-top: 1.5%;
+  padding-top: 2%;
   padding-bottom: 1.5%;
 }
 </style>

@@ -21,7 +21,7 @@ export default {
   },
   computed: {
     sellSize: function() {
-      return "width: " + 100/this.content.length + "%;";
+      return "width: " + (100 - 1 * this.content.length)/this.content.length + "%;";
     }
   }
 };
@@ -29,18 +29,16 @@ export default {
 
 <style lang="scss" scoped>
 
-.container, .cell {
-  border: 3px solid black;
-}
-
 .container {
   width: 100%;
-  aspect-ratio: 1/1;
 }
 
 .cell {
   aspect-ratio: 1/1;
   background: #abe68e;
+  border: 3px solid #28a745;
+  border-radius: 7px;
+  margin: 0 0.5% 0.5% 0;
 }
 
 * {
