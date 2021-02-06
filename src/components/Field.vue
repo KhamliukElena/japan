@@ -70,12 +70,12 @@ export default {
   aspect-ratio: 1/1;
 }
 
-.hor {
-  aspect-ratio: 1/1.25;
+.is-img:hover, .not-img:hover {
+  box-shadow: 1px 1px 2px #28a745, -1px -1px 2px #28a745; 
 }
 
-.cell:hover {
-  box-shadow: 1px 1px 2px #28a745, -1px -1px 2px #28a745; 
+.hor {
+  aspect-ratio: 1/1.25;
 }
 
 .hor:first-child {
