@@ -1,10 +1,11 @@
 <template>
     <div class="container">
-      <div v-for="row in content.length + 1" :key="row-1" class="row">
-        <div v-for="col in content.length + 1" :key="col-1" class="cell not-set"
+      <div v-for="row in content.length + 1" :key="row" class="row">
+        <div v-for="col in content.length + 1" :key="col" class="cell not-set"
           v-bind:style="sellSize"
           v-on:click="checkClick"
           v-bind:class="getImg(row-1, col-1)">
+          <p v-if="row == 1 || col == 1" v-html="fillTask(row-1, col-1)"></p>
         </div>
       </div>
     </div>
@@ -46,6 +47,36 @@ export default {
       else {
         return "not-img";
       }
+    },
+    fillTask: function(i, j) {
+      let inner = "";
+      let num = 0;
+      if (i == 0) {
+        if (j == 0) return;
+        for (i; i<this.content.length; i++) {
+          if (this.content[i][j-1] == 1) {
+            num++;
+          }
+          else if (num != 0) {
+            inner += num.toString() + "<br>";
+            num = 0;
+          }
+        }
+      }
+      else if (j == 0) {
+        for (j; j<this.content.length; j++) {
+          if (this.content[i-1][j] == 1) {
+            num++;
+          }
+          else if (num != 0) {
+            inner += num.toString() + " ";
+            num = 0;
+          }
+        }
+      }
+      if (num != 0) inner += num.toString();
+      if (inner == "") inner+="0";
+      return inner;
     }
   }
 };
