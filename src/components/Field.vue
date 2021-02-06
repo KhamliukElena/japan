@@ -1,11 +1,13 @@
 <template>
     <div class="container">
       <div v-for="row in content.length + 1" :key="row" class="row">
-        <div v-for="col in content.length + 1" :key="col" class="cell not-set"
-          v-bind:style="sellSize"
-          v-on:click="checkClick"
-          v-bind:class="getImg(row-1, col-1)">
-          <p v-if="row == 1 || col == 1" v-html="fillTask(row-1, col-1)"></p>
+        <div v-for="col in content.length + 1" :key="col"
+        v-bind:style="sellSize"
+        v-on:click="checkClick"
+        v-bind:class="getImg(row-1, col-1)"
+        class="cell not-set d-flex align-items-center">
+        <p v-if="row == 1 || col == 1" v-html="fillTask(row-1, col-1)"
+        class="font-weight-bold"></p>
         </div>
       </div>
     </div>
@@ -26,7 +28,7 @@ export default {
   },
   computed: {
     sellSize: function() {
-      return "width: " + (100 - 1 * (this.content.length + 1))/(this.content.length + 1) + "%;";
+      return "width: " + (80 - 0.3 * (this.content.length + 1)) / this.content.length + "%;";
     },
     console: () => console
   },
@@ -39,7 +41,7 @@ export default {
         return "description hor";
       }
       else if (j == 0) {
-        return "description";
+        return "description vert";
       }
       else if (this.content[i-1][j-1] == 1) {
         return "is-img";
@@ -104,17 +106,19 @@ export default {
 }
 
 .hor {
-  aspect-ratio: 1/1.25;
+  height: auto;
 }
 
 .hor:first-child {
   border: none;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+p {
+  margin: 0 auto;
+}
+
+.cell:first-child {
+  width: 20%!important;
 }
 
 @media (min-width: 992px) {
