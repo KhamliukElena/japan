@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-fluid">
       <div v-for="row in content.length + 1" :key="row" class="row">
         <div v-for="col in content.length + 1" :key="col"
         v-bind:style="sellSize"
@@ -28,7 +28,7 @@ export default {
   },
   computed: {
     sellSize: function() {
-      return "width: " + (80 - 0.3 * (this.content.length + 1)) / this.content.length + "%;";
+      return "width: " + (85 - 0.3 * (this.content.length + 1)) / this.content.length + "%;";
     },
     console: () => console
   },
@@ -118,7 +118,7 @@ p {
 }
 
 .cell:first-child {
-  width: 20%!important;
+  width: 15%!important;
 }
 
 @media (min-width: 992px) {

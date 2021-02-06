@@ -1,6 +1,6 @@
 <template>
   <div class="game">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-11"><Field v-bind:content="content" /></div>
@@ -40,5 +40,6 @@ export default {
 .game {
   padding-top: 1.4%;
   padding-bottom: 1.65%;
+  padding: 1.4% 5% 1.65%
 }
 </style>
