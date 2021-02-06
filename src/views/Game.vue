@@ -2,7 +2,7 @@
   <div class="game">
     <div class="container">
       <div class="row">
-        <div class="col-md-1"><!--Left bar--></div>
+        <div class="col-md-2"><!--Left bar--></div>
         <div class="col-md-9"><Field v-bind:content="content" /></div>
         <div class="col-md-1"><!--Right bar--></div>
       </div>
@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss">
 .game {
-  padding-top: 2%;
-  padding-bottom: 1.5%;
+  padding-top: 1.4%;
+  padding-bottom: 1.65%;
 }
 </style>

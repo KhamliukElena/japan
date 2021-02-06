@@ -1,6 +1,5 @@
 <template>
-  <div class="container">
-    <div class="container-fluid">
+    <div class="container">
       <div v-for="row in content.length + 1" :key="row-1" class="row">
         <div v-for="col in content.length + 1" :key="col-1" class="cell not-set"
           v-bind:style="sellSize"
@@ -9,7 +8,6 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -86,6 +84,12 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@media (min-width: 992px) {
+  .hor {
+    aspect-ratio: 1/0.9;
+  }
 }
 
 </style>

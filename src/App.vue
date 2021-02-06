@@ -25,6 +25,9 @@
 .brand {
   margin-left: 5px;
 }
+.ml-auto {
+  font-size: 0.8em;
+}
 router-link {
   text-decoration: none;
 }
@@ -46,6 +49,11 @@ body {
 @media (max-width: 575.98px) {
   .navbar-brand {
     font-size: 1.4em;
+  }
+}
+@media (max-width: 350px) {
+  .navbar-brand {
+    font-size: 1.1em;
   }
 }
 </style>
