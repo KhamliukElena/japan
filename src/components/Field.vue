@@ -1,11 +1,11 @@
 <template>
   <div class="container">
     <div class="container-fluid">
-      <div v-for="row in content.length" :key="row" class="row">
-        <div v-for="col in content.length" :key="col" class="cell not-set"
+      <div v-for="row in content.length + 1" :key="row-1" class="row">
+        <div v-for="col in content.length + 1" :key="col-1" class="cell not-set"
           v-bind:style="sellSize"
           v-on:click="checkClick"
-          v-bind:class="getImg(row, col)">
+          v-bind:class="getImg(row-1, col-1)">
         </div>
       </div>
     </div>
@@ -27,15 +27,22 @@ export default {
   },
   computed: {
     sellSize: function() {
-      return "width: " + (100 - 1 * this.content.length)/this.content.length + "%;";
-    }
+      return "width: " + (100 - 1 * (this.content.length + 1))/(this.content.length + 1) + "%;";
+    },
+    console: () => console
   },
   methods: {
     checkClick: function() {
       console.log("click");
     },
     getImg: function (i, j) {
-      if (this.content[i-1][j-1] == 1) {
+      if (i == 0) {
+        return "description hor";
+      }
+      else if (j == 0) {
+        return "description";
+      }
+      else if (this.content[i-1][j-1] == 1) {
         return "is-img";
       }
       else {
@@ -53,15 +60,26 @@ export default {
 }
 
 .cell {
-  aspect-ratio: 1/1;
-  background: #abe68e;
   border: 3px solid #28a745;
   border-radius: 7px;
-  margin: 0 0.7% 0.7% 0;
+  margin: 0 0.3% 0.3% 0;
+}
+
+.is-img, .not-img {
+  background: #abe68e;
+  aspect-ratio: 1/1;
+}
+
+.hor {
+  aspect-ratio: 1/1.25;
 }
 
 .cell:hover {
   box-shadow: 1px 1px 2px #28a745, -1px -1px 2px #28a745; 
+}
+
+.hor:first-child {
+  border: none;
 }
 
 * {
