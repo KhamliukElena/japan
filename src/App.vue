@@ -9,8 +9,6 @@
   </nav>
   <!--Content-->
   <router-view/>
-  <!--footer-->
-  <nav class="navbar fixed-bottom"><div class="ml-auto">Icons are borrowed from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div></nav>
 </template>
 
 <style lang="scss">
@@ -24,9 +22,6 @@
 }
 .brand {
   margin-left: 5px;
-}
-.ml-auto {
-  font-size: 0.8em;
 }
 router-link {
   text-decoration: none;
