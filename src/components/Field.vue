@@ -6,6 +6,7 @@
         v-on:click="checkClick"
         v-bind:class="getImg(row-1, col-1)"
         class="cell not-set d-flex align-items-center">
+        <span></span>
         <p v-if="row == 1 || col == 1" v-html="fillTask(row-1, col-1)"
         class="font-weight-bold"></p>
         </div>
@@ -18,12 +19,17 @@ export default {
   name: 'Field',
   props: {
     content: {
-      type: Array
+      type: Array,
+      required: true
+    },
+    cellsToFind: {
+      type: Number,
+      required: true
     }
   },
   data: function () {
     return {
-      cellsFound: 0
+      cellsFound: 0,
     }
   },
   computed: {
@@ -33,8 +39,23 @@ export default {
     console: () => console
   },
   methods: {
-    checkClick: function() {
-      console.log("click");
+    checkClick: function(e) {
+      let currentCell = e.target;
+      if (currentCell.classList.contains('description')) {
+        return; //do nothing if a cell is descriptional, not for playing
+      }
+      else if (currentCell.classList.contains('not-img')) {
+        var child = currentCell.children[0];
+        child.classList.add("cross");
+      }
+      else {
+        var child = currentCell.children[0];
+        child.classList.add("square");
+        this.cellsFound++;
+        if (this.cellsToFind === this.cellsFound) {
+          console.log("victory");
+        }
+      }
     },
     getImg: function (i, j) {
       if (i == 0) {
@@ -96,6 +117,26 @@ export default {
   margin: 0 0.3% 0.3% 0;
 }
 
+.cell:first-child {
+  width: 15%!important;
+}
+
+span.cross, span.square {
+  display: inline-block;
+  margin-left: 5%;
+  width: 90%;
+  aspect-ratio: 1/1;
+  background-size: 100% 100%;
+}
+
+span.cross {
+  background-image: url("../assets/cross-symbol_icon-icons.com_74149.svg");
+}
+
+span.square {
+  background-image: url("../assets/lines.svg");
+}
+
 .is-img, .not-img {
   background: #abe68e;
   aspect-ratio: 1/1;
@@ -115,10 +156,6 @@ export default {
 
 p {
   margin: 0 auto;
-}
-
-.cell:first-child {
-  width: 15%!important;
 }
 
 @media (min-width: 992px) {

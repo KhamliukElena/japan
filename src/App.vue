@@ -10,7 +10,7 @@
   <!--Content-->
   <router-view/>
   <!--footer-->
-  <nav class="navbar fixed-bottom"><div class="ml-auto">Author of Icons: <a href="https://www.flaticon.com/ru/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div></nav>
+  <nav class="navbar fixed-bottom"><div class="ml-auto">Icons are borrowed from <a href="https://www.flaticon.com/ru/" title="Flaticon">www.flaticon.com</a></div></nav>
 </template>
 
 <style lang="scss">
