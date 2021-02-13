@@ -3,7 +3,7 @@
 I got an ispiration for this project from Nonogram.com ( https://play.google.com/store/apps/details?id=com.easybrain.nonogram&hl=ru&gl=US ). The idea is the same with some minor corrections. I plan to add ? sign in addition to square and x signs to mark cells, which require further investigation.
 Due to attempt in adaptivity I plan to add a switch to replace right mouse button click for mobile devices.]
 
-What's planned for implementation:
+What's more planned for implementation:
 
 1. Add check if a cell of a game field has already been visited not to process it several times.
 2. Switch for different types of clicks and add it into cell check processtion.
