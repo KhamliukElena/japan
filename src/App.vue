@@ -15,26 +15,37 @@
 .navbar-brand {
   font-size: 1.5em;
   color: #fafaf1;
+  text-shadow: 1px 1px 3px #2e302d;
 }
+
 .navbar-brand:hover {
-  color: #fafaf1;
-  text-shadow: 1px 1px 3px #abe68e;
+  color: #464643;
 }
+
 .brand {
   margin-left: 5px;
 }
+
 router-link {
   text-decoration: none;
 }
+
 a {
   color: #28a745;
 }
+
+a:hover {
+  color: #464643;
+}
+
 img {
   height: 40px;
 }
+
 body {
   background: #fafaf1;
 }
+
 * {
   margin: 0;
   padding: 0;
