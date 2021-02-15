@@ -112,13 +112,9 @@ export default {
 
 <style lang="scss" scoped>
 
-.container {
-  width: 100%;
-}
-
 /* COMMON STYLES */
 
-.cell, .switch, span.switch-item {
+.cell, span.switch-item {
   border: 3px solid #28a745;
   border-radius: 7px;
 }
@@ -156,8 +152,7 @@ span.cross, span.square, span.question {
 }
 
 .switch {
-  width: 25%;
-  padding: 1% 1% 0.5% 0;
+  width: 15%;
 }
 
 span.switch-item {
@@ -190,8 +185,24 @@ p {
 }
 
 @media (min-width: 992px) {
+  .container-fluid {
+    width: 70%;
+  }
+
   .hor {
-    aspect-ratio: 1/0.9;
+    aspect-ratio: 1/0.7;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container-fluid {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container-fluid {
+    width: 50%;
   }
 }
 
