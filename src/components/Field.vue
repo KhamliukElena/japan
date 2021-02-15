@@ -12,6 +12,11 @@
         </div>
       </div>
     </div>
+    <div class="switch">
+      <span class="switch-item square selected"></span>
+      <span class="switch-item cross"></span>
+      <span class="switch-item question"></span>
+    </div>
 </template>
 
 <script>
@@ -111,9 +116,24 @@ export default {
   width: 100%;
 }
 
-.cell {
+/* COMMON STYLES */
+
+.cell, .switch, span.switch-item {
   border: 3px solid #28a745;
   border-radius: 7px;
+}
+
+.selected, .is-img, .not-img {
+  background: #abe68e;
+}
+
+.is-img, .not-img, span.cross, span.square, span.question {
+  aspect-ratio: 1/1;
+}
+
+/*SPECIFIC STYLES*/
+
+.cell {
   margin: 0 0.3% 0.3% 0;
 }
 
@@ -121,12 +141,20 @@ export default {
   width: 15%!important;
 }
 
-span.cross, span.square {
-  display: inline-block;
+.switch {
+  width: 25%;
+  padding: 1% 1% 0.5% 0;
+}
+
+span.cross, span.square, span.question {
   margin-left: 5%;
   width: 90%;
-  aspect-ratio: 1/1;
   background-size: 100% 100%;
+}
+
+span.switch-item {
+  width: 28%;
+  display: inline-block;
 }
 
 span.cross {
@@ -137,9 +165,8 @@ span.square {
   background-image: url("../assets/lines.svg");
 }
 
-.is-img, .not-img {
-  background: #abe68e;
-  aspect-ratio: 1/1;
+span.question {
+  background-image: url("../assets/question-mark.svg");
 }
 
 .is-img:hover, .not-img:hover {

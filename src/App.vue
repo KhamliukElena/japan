@@ -18,10 +18,6 @@
   text-shadow: 1px 1px 3px #2e302d;
 }
 
-.navbar-brand:hover {
-  color: #464643;
-}
-
 .brand {
   margin-left: 5px;
 }
@@ -34,7 +30,7 @@ a {
   color: #28a745;
 }
 
-a:hover {
+a:hover, .navbar-brand:hover {
   color: #464643;
 }
 
