@@ -123,12 +123,22 @@ export default {
   border-radius: 7px;
 }
 
-.selected, .is-img, .not-img {
-  background: #abe68e;
+.is-img, .not-img, .switch-item:hover:not(.selected) {
+  background-color: #abe68e;
+}
+
+.is-img:hover, .not-img:hover {
+  box-shadow: 1px 1px 2px #28a745, -1px -1px 2px #28a745; 
 }
 
 .is-img, .not-img, span.cross, span.square, span.question {
   aspect-ratio: 1/1;
+}
+
+span.cross, span.square, span.question {
+  margin-left: 5%;
+  width: 90%;
+  background-size: 100% 100%;
 }
 
 /*SPECIFIC STYLES*/
@@ -141,15 +151,13 @@ export default {
   width: 15%!important;
 }
 
+.selected {
+  background-color: #28a745;
+}
+
 .switch {
   width: 25%;
   padding: 1% 1% 0.5% 0;
-}
-
-span.cross, span.square, span.question {
-  margin-left: 5%;
-  width: 90%;
-  background-size: 100% 100%;
 }
 
 span.switch-item {
@@ -167,10 +175,6 @@ span.square {
 
 span.question {
   background-image: url("../assets/question-mark.svg");
-}
-
-.is-img:hover, .not-img:hover {
-  box-shadow: 1px 1px 2px #28a745, -1px -1px 2px #28a745; 
 }
 
 .hor {
