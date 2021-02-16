@@ -1,6 +1,6 @@
 # japan
 
-I got an ispiration for this project from Nonogram.com ( https://play.google.com/store/apps/details?id=com.easybrain.nonogram&hl=ru&gl=US ). The idea is the same with some minor corrections. I plan to add ? sign in addition to square and x signs to mark cells, which require further investigation.
+I got an ispiration for this project from Nonogram.com ( https://play.google.com/store/apps/details?id=com.easybrain.nonogram&hl=ru&gl=US ). I thought it's an interesting task to implement and gain some practical skills. The idea is the same with some minor corrections. I plan to add ? sign in addition to square and x signs to mark cells, which require further investigation.
 Due to attempt in adaptivity I plan to add a switch to replace right mouse button click for mobile devices.]
 
 What's more planned for implementation:
