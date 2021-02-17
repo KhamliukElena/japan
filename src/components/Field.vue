@@ -147,12 +147,17 @@ span.cross, span.square, span.question {
   width: 15%!important;
 }
 
+.container-fluid {
+  margin-bottom: 0.5%;
+}
+
 .selected {
   background-color: #28a745;
 }
 
 .switch {
-  width: 15%;
+  margin: auto;
+  width: 20%;
 }
 
 span.switch-item {
@@ -184,6 +189,14 @@ p {
   margin: 0 auto;
 }
 
+/*ADAPTIVITY STYLES*/
+
+@media (max-width: 425px) {
+  .switch {
+    width: 45%;
+  }
+}
+
 @media (min-width: 992px) {
   .container-fluid {
     width: 70%;
@@ -191,6 +204,12 @@ p {
 
   .hor {
     aspect-ratio: 1/0.7;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .switch {
+    width: 35%;
   }
 }
 

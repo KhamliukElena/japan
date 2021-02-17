@@ -44,8 +44,6 @@ export default {
 
 <style lang="scss">
 .game {
-  padding-top: 1.4%;
-  padding-bottom: 1.65%;
-  padding: 1.4% 5% 1.65%
+  padding: 0.7% 5%;
 }
 </style>
