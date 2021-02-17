@@ -44,24 +44,39 @@ export default {
     console: () => console
   },
   methods: {
+    switchMode: function() {
+      let cell = document.querySelector(".selected").classList;
+      if (cell.contains("square")) return "square";
+      else if (cell.contains("cross")) return "cross";
+      else if (cell.contains("question")) return "question";
+    },
     checkClickField: function(e) {
       let currentCell = e.target;
+      let mode = this.switchMode();
+      var child = currentCell.children[0];
+      console.log(mode);
       if (currentCell.classList.contains('description') || currentCell.classList.contains('set')) {
         return; //do nothing if a cell is descriptional or already has been processed
       }
-      else if (currentCell.classList.contains('not-img')) {
-        var child = currentCell.children[0];
+      else if (currentCell.classList.contains('not-img') && mode === "cross") {
+        console.log("in cross");
+        if (child.classList.contains("question")) child.classList.remove("question");
         child.classList.add("cross");
         child.classList.add("set");
       }
-      else {
-        var child = currentCell.children[0];
+      else if (currentCell.classList.contains('is-img') && mode === "square") {
+        console.log("in square");
+        if (child.classList.contains("question")) child.classList.remove("question");
         child.classList.add("square");
         child.classList.add("set");
         this.cellsFound++;
         if (this.cellsToFind === this.cellsFound) {
           console.log("victory");
         }
+      }
+      else if (mode === "question") {
+        console.log("in ?");
+        child.classList.add("question");
       }
     },
     switchClick: function(e) {
@@ -70,14 +85,8 @@ export default {
         return;
       }
       else {
-        let nodes = currentCell.parentNode.children;
-        for (let i=0; i<nodes.length; i++) {
-          if (nodes[i].classList.contains("selected")) {
-            nodes[i].classList.remove("selected");
-            currentCell.classList.add("selected");
-            return;
-          }
-        }
+        document.querySelector(".selected").classList.remove("selected");
+        currentCell.classList.add("selected");
       }
     },
     getImg: function (i, j) {
