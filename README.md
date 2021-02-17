@@ -5,10 +5,10 @@ Due to attempt in adaptivity I plan to add a switch to replace right mouse butto
 
 What's more planned for implementation:
 
-1. Add check if a cell of a game field has already been visited not to process it several times;
-2. Switch for different types of clicks and add it into cell check processtion;
+1. Add check if a cell of a game field has already been visited not to process it several times (done 17.02);
+2. Switch for different types of clicks and add it into cell check procession (done 17.02);
 3. Add processing of incorrect clicks;
-4. Add reading level information from a .json file instead of hard coding;
+4. Add reading level information from a .json file instead of hardcoding;
 5. Add "levels" wiget to be able to switch between levels;
 6. Think about level information transmition and reading: should component "Field" process it? Consider vuex for data exchange;
 7. Validate information about level in component "Field".
