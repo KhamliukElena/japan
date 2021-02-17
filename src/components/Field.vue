@@ -3,9 +3,9 @@
       <div v-for="row in content.length + 1" :key="row" class="row">
         <div v-for="col in content.length + 1" :key="col"
         v-bind:style="sellSize"
-        v-on:click="checkClick"
+        v-on:click="checkClickField"
         v-bind:class="getImg(row-1, col-1)"
-        class="cell not-set d-flex align-items-center">
+        class="cell d-flex align-items-center">
         <span></span>
         <p v-if="row == 1 || col == 1" v-html="fillTask(row-1, col-1)"
         class="font-weight-bold"></p>
@@ -13,9 +13,9 @@
       </div>
     </div>
     <div class="switch">
-      <span class="switch-item square selected"></span>
-      <span class="switch-item cross"></span>
-      <span class="switch-item question"></span>
+      <span v-on:click="switchClick" class="switch-item square selected"></span>
+      <span v-on:click="switchClick" class="switch-item cross"></span>
+      <span v-on:click="switchClick" class="switch-item question"></span>
     </div>
 </template>
 
@@ -44,21 +44,39 @@ export default {
     console: () => console
   },
   methods: {
-    checkClick: function(e) {
+    checkClickField: function(e) {
       let currentCell = e.target;
-      if (currentCell.classList.contains('description')) {
-        return; //do nothing if a cell is descriptional, not for playing
+      if (currentCell.classList.contains('description') || currentCell.classList.contains('set')) {
+        return; //do nothing if a cell is descriptional or already has been processed
       }
       else if (currentCell.classList.contains('not-img')) {
         var child = currentCell.children[0];
         child.classList.add("cross");
+        child.classList.add("set");
       }
       else {
         var child = currentCell.children[0];
         child.classList.add("square");
+        child.classList.add("set");
         this.cellsFound++;
         if (this.cellsToFind === this.cellsFound) {
           console.log("victory");
+        }
+      }
+    },
+    switchClick: function(e) {
+      let currentCell = e.target;
+      if (currentCell.classList.contains("selected")) {
+        return;
+      }
+      else {
+        let nodes = currentCell.parentNode.children;
+        for (let i=0; i<nodes.length; i++) {
+          if (nodes[i].classList.contains("selected")) {
+            nodes[i].classList.remove("selected");
+            currentCell.classList.add("selected");
+            return;
+          }
         }
       }
     },
