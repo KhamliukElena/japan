@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div class="container-fluid">
       <div v-for="row in content.length + 1" :key="row" class="row">
         <div v-for="col in content.length + 1" :key="col"
@@ -17,6 +18,7 @@
       <span v-on:click="switchClick" class="switch-item cross"></span>
       <span v-on:click="switchClick" class="switch-item question"></span>
     </div>
+  </div>
 </template>
 
 <script>

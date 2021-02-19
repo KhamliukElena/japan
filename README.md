@@ -11,6 +11,7 @@ What's more planned for implementation:
 4. Add reading level information from a .json file instead of hardcoding;
 5. Add "levels" wiget to be able to switch between levels;
 6. Think about level information transmition and reading: should component "Field" process it? Consider vuex for data exchange;
-7. Validate information about level in component "Field".
+7. Validate information about level in component "Field";
+8. Add a modal window for victory indication.
 
 I will update this readme when these features are implemented.
